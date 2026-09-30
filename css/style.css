@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+/* Cookie Popup */
+.cookie-popup {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 18px);
+  max-width: 337px;
+  height: 377px;
+
+  background: #000000;
+  border-radius: 21px;
+
+  padding: 32px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+
+  z-index: 9999;
+}
+
+/* Cookie Icon */
+.cookie-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  width: 60px;
+  height: 60px;
+
+  object-fit: contain;
+
+  /* convert black icon to white */
+  filter: invert(1);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+
+  top: 22px;
+  right: 18px;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* convert black icon to white */
+  filter: invert(1);
+}
+
+.close-btn img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+}
+
+/* Content */
+.cookie-content {
+  position: absolute;
+
+  left: 32px;
+  right: 25px;
+  top: 171px;
+}
+
+.cookie-content p {
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1.3;
+
+  font-weight: 400;
+
+  letter-spacing: -0.4px;
+}
+
+/* Accept Button */
+.accept-btn {
+  position: absolute;
+
+  left: 32px;
+  right: 25px;
+  bottom: 28px;
+
+  width: calc(100% - 57px);
+  height: 58px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.accept-btn:hover {
+  background: #f2f2f2;
+}
+
+.accept-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 380px) {
+
+  .cookie-popup {
+    width: calc(100% - 16px);
+    height: 377px;
+
+    padding: 28px;
+  }
+
+  .cookie-icon {
+    top: 29px;
+    left: 30px;
+
+    width: 58px;
+    height: 58px;
+  }
+
+  .cookie-content {
+    left: 30px;
+    right: 22px;
+    top: 170px;
+  }
+
+  .cookie-content p {
+    font-size: 24px;
+  }
+
+  .accept-btn {
+    left: 30px;
+    right: 22px;
+    bottom: 27px;
+
+    width: calc(100% - 52px);
+
+    font-size: 23px;
+  }
+
+  .close-btn {
+    right: 16px;
+    top: 20px;
+  }
+}
